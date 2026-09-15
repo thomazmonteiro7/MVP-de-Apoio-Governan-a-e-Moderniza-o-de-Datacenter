@@ -1,0 +1,2 @@
+# MVP-de-Apoio-Governan-a-e-Moderniza-o-de-Datacenter
+O caso trata do Hospital Metropolitano do Litoral, que opera 24x7 e possui ativos envelhecidos, baixa folga de capacidade, janela extensa de backup e risco crescente de indisponibilidade. O objetivo do projeto é comparar alternativas e planejar uma migração em ondas sem comprometer os serviços críticos.
