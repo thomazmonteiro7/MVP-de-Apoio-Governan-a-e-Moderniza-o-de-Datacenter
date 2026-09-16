@@ -1,1 +1,125 @@
+Esse é o documento que explica o que o sistema vai fazer.
+
+Nome do projeto
+
+MVP de Apoio à Governança e Modernização de Datacenter
+
+Contexto
+
 O caso trata do Hospital Metropolitano do Litoral, que opera 24x7 e possui ativos envelhecidos, baixa folga de capacidade, janela extensa de backup e risco crescente de indisponibilidade. O objetivo do projeto é comparar alternativas e planejar uma migração em ondas sem comprometer os serviços críticos.
+
+Objetivo
+
+Criar um MVP capaz de organizar:
+
+inventário;
+workloads;
+capacidade;
+custos;
+riscos;
+alternativas de infraestrutura;
+migração;
+evidências para apoiar uma decisão executiva.
+
+O sistema não virtualiza fisicamente o hospital.
+
+3. Requisitos funcionais
+
+Aqui vocês colocam o que o sistema precisa fazer.
+
+RF01 — Importar inventário
+
+O sistema deverá permitir a importação do inventário de ativos por CSV/XLSX.
+
+RF02 — Importar workloads
+
+O sistema deverá permitir importar os workloads e suas características.
+
+RF03 — Classificar workloads
+
+O sistema deverá permitir definir:
+
+Tier;
+RTO;
+RPO.
+RF04 — Calcular capacidade
+
+O sistema deverá calcular baseline e projeção de:
+
+CPU;
+RAM;
+storage;
+IOPS;
+rede.
+
+A projeção deverá considerar crescimento e headroom para 36 meses.
+
+RF05 — Comparar alternativas
+
+O sistema deverá comparar:
+
+HCI Enterprise;
+Compute + SAN;
+Proxmox + Ceph.
+
+RF06 — Calcular TCO
+
+O sistema deverá calcular o TCO de cinco anos das alternativas.
+
+RF07 — Registrar riscos
+
+O sistema deverá registrar:
+
+risco;
+trigger;
+owner;
+controle.
+RF08 — Planejar migração
+
+O sistema deverá permitir registrar a migração em ondas, incluindo:
+
+pré-condições;
+rollback;
+aceite.
+RF09 — Registrar evidências
+
+O sistema deverá armazenar informações que sustentem a análise técnica, financeira e de risco.
+
+4. Requisitos não funcionais
+RNF01 — Python
+
+A versão Python deverá utilizar:
+
+Python 3.12;
+FastAPI;
+Pydantic.
+RNF02 — Java
+
+A versão Java deverá utilizar:
+
+Java 21;
+Spring Boot.
+RNF03 — API
+
+As aplicações deverão disponibilizar API REST.
+
+RNF04 — Documentação
+
+A API Python deverá possuir Swagger em /docs.
+
+RNF05 — Testes
+
+Python deverá utilizar pytest e Java deverá utilizar JUnit 5.
+
+RNF06 — Observabilidade
+
+O ambiente deverá trabalhar com:
+
+Prometheus;
+Grafana;
+métricas;
+logs;
+health checks.
+RNF07 — Execução
+
+O ambiente integrado deverá ser executável por Docker Compose.
