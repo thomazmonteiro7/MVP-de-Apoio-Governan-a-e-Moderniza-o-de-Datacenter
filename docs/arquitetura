@@ -26,6 +26,16 @@ CAMADA DE APLICAÇÃO
 └─────────────────────────┘
 
        OBSERVABILIDADE
+
+APIs
+
+Python / FastAPI
+       │
+       ├── mesma lógica
+       │
+Java / Spring Boot
+
+
        │       │
        ▼       ▼
   Prometheus  Grafana
