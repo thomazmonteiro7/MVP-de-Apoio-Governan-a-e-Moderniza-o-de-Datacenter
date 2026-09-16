@@ -1,14 +1,12 @@
-Esse é o documento que explica o que o sistema vai fazer.
-
-Nome do projeto
+Nome do projeto:
 
 MVP de Apoio à Governança e Modernização de Datacenter
 
-Contexto
+Contexto:
 
 O caso trata do Hospital Metropolitano do Litoral, que opera 24x7 e possui ativos envelhecidos, baixa folga de capacidade, janela extensa de backup e risco crescente de indisponibilidade. O objetivo do projeto é comparar alternativas e planejar uma migração em ondas sem comprometer os serviços críticos.
 
-Objetivo
+Objetivo:
 
 Criar um MVP capaz de organizar:
 
@@ -23,7 +21,7 @@ evidências para apoiar uma decisão executiva.
 
 O sistema não virtualiza fisicamente o hospital.
 
-3. Requisitos funcionais
+3. Requisitos funcionais:
 
 Aqui vocês colocam o que o sistema precisa fazer.
 
