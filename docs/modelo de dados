@@ -9,3 +9,120 @@ evidences
 
 
 exemplo de ordem.
+
+
+
+
+
+🖥️ Tabela servers
+
+Representa os servidores do inventário.
+
+Campo	Tipo sugerido
+id	SERIAL
+hostname	VARCHAR
+cpu_cores	INTEGER
+ram_gb	DECIMAL
+storage_tb	DECIMAL
+iops	INTEGER
+network_gbps	DECIMAL
+power_kw	DECIMAL
+status	VARCHAR
+lifecycle	VARCHAR
+
+O projeto trabalha com inventário de ativos e capacidade.
+
+🖥️ Tabela workloads
+
+Representa as aplicações/cargas de trabalho.
+
+Campo	Tipo sugerido
+id	SERIAL
+name	VARCHAR
+tier_id	INTEGER
+cpu_cores	DECIMAL
+ram_gb	DECIMAL
+storage_tb	DECIMAL
+iops	INTEGER
+network_gbps	DECIMAL
+rto_minutes	INTEGER
+rpo_minutes	INTEGER
+dependency	TEXT
+
+O guia especifica workloads com tier, recursos, IOPS, RTO, RPO e dependências.
+
+🏷️ Tabela tiers
+Campo	Tipo
+id	SERIAL
+name	VARCHAR
+description	TEXT
+default_rto	INTEGER
+default_rpo	INTEGER
+
+Exemplo:
+
+Tier 1
+Tier 2
+Tier 3
+
+O guia exige classificação dos workloads por criticidade e definição de RTO/RPO.
+
+🏗️ Tabela alternatives
+
+Aqui ficam as três alternativas.
+
+Campo	Tipo
+id	SERIAL
+name	VARCHAR
+description	TEXT
+support_level	TEXT
+lock_in	TEXT
+internal_competence	TEXT
+continuity_notes	TEXT
+
+Dados iniciais:
+
+1 | HCI Enterprise
+2 | Compute + SAN
+3 | Proxmox + Ceph
+💰 Tabela tco
+Campo	Tipo
+id	SERIAL
+alternative_id	INTEGER
+hardware	DECIMAL
+support	DECIMAL
+energy	DECIMAL
+services	DECIMAL
+training	DECIMAL
+contingency	DECIMAL
+total_5_years	DECIMAL
+
+O TCO deve considerar cinco anos e incluir energia, suporte, serviços, treinamento e contingência.
+
+⚠️ Tabela risks
+Campo	Tipo
+id	SERIAL
+description	TEXT
+trigger	TEXT
+owner	VARCHAR
+control	TEXT
+status	VARCHAR
+🔄 Tabela migration_waves
+Campo	Tipo
+id	SERIAL
+wave_number	INTEGER
+description	TEXT
+prerequisites	TEXT
+rollback_plan	TEXT
+acceptance_criteria	TEXT
+owner	VARCHAR
+status	VARCHAR
+📎 Tabela evidences
+Campo	Tipo
+id	SERIAL
+type	VARCHAR
+description	TEXT
+source	TEXT
+created_at	TIMESTAMP
+
+Serve para registrar evidências usadas para sustentar a análise.
